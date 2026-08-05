@@ -1,0 +1,25 @@
+Package: swingeR
+Type: Package
+Title: Tools for Selecting Low-Relatedness Breeding Groups and
+        Screening VCF Data
+Version: 0.4.0
+Authors@R: person("Jonathan Sandoval-Castillo Yuma248", email = "jonathan.sandoval-castillo@flinders.edu.au", role = c("aut", "cre"))
+Description: Provides three sets of tools. (1) Given a pairwise kinship/relatedness
+    data frame and per-individual sex and internal relatedness values, selects
+    sets of non-overlapping breeding/family groups that satisfy user-specified
+    relatedness thresholds, with an optional auto-tuning mode that relaxes
+    thresholds when no valid solution exists. (2) Helper functions for
+    summarizing SNP- and individual-level quality/heterozygosity metrics from
+    VCF files (via 'vcfR') and for converting VCF files to GDS format (via
+    'SNPRelate') for downstream population genetics analyses. (3) An
+    interactive relatedness-network visualization built on 'visNetwork'.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+Imports: utils, stats, dplyr, vcfR, SNPRelate, visNetwork
+Suggests: gdsfmt
+NeedsCompilation: no
+Packaged: 2026-07-09 08:17:49 UTC; root
+Author: Jonathan Sandoval-Castillo Yuma248 [aut, cre]
+Maintainer: Jonathan Sandoval-Castillo <jonathan.sandoval-castillo@flinders.edu.au>
+Config/roxygen2/version: 8.0.0
