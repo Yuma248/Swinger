@@ -418,7 +418,7 @@ print_matrix_groups<-function(outputswinger, kr_df) {
       dplyr::filter(from %in% ids & to %in% ids)
     r <- match(tmp$from, ids)
     c <- match(tmp$to, ids)
-    mat[cbind(r, c)] <- tmp$kinship
+    mat[cbind(r, c)] <- if (method == "kinship") tmp$kinship else tmp$relatedness
     diag(mat) <- 0
     mat
   })
