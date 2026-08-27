@@ -91,15 +91,15 @@ networkY <- function(krdf, meta, td = 0.1, method = "relative", kr = "kinship") 
 
   edges <- krdf %>%
     dplyr::mutate(
-      value = rlang::.data[[kr]],
-      title = paste0("\u03c6 = ", round(rlang::.data[[kr]], 4)),
+      value = .data[[kr]],
+      title = paste0("\u03c6 = ", round(.data[[kr]], 4)),
       color = dplyr::case_when(
-        rlang::.data[[kr]] >= 0.25   ~ "#E84040",
-        rlang::.data[[kr]] >= 0.125  ~ "#E8A040",
-        rlang::.data[[kr]] >= 0.0625 ~ "#E8D840",
-        rlang::.data[[kr]] >= 0.02   ~ "#33CC00",
-        rlang::.data[[kr]] >= 0.01   ~ "#99CC00",
-        rlang::.data[[kr]] < -0.02   ~ "#009900",
+        .data[[kr]] >= 0.25   ~ "#E84040",
+        .data[[kr]] >= 0.125  ~ "#E8A040",
+        .data[[kr]] >= 0.0625 ~ "#E8D840",
+        .data[[kr]] >= 0.02   ~ "#33CC00",
+        .data[[kr]] >= 0.01   ~ "#99CC00",
+        .data[[kr]] < -0.02   ~ "#009900",
         TRUE                  ~ "#AAAAAA"
       )
     )
@@ -115,10 +115,10 @@ networkY <- function(krdf, meta, td = 0.1, method = "relative", kr = "kinship") 
   }
 
   edges_filtered <- edges %>%
-    dplyr::filter(rlang::.data[[kr]] <= threshold) %>%
+    dplyr::filter(.data[[kr]] <= threshold) %>%
     dplyr::mutate(
       value  = 1,
-      title  = paste0("\u03c6 = ", round(rlang::.data[[kr]], 4)),
+      title  = paste0("\u03c6 = ", round(.data[[kr]], 4)),
       color  = "#848484",
       hidden = FALSE
     )

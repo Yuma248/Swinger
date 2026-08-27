@@ -2,7 +2,7 @@ Package: swingeR
 Type: Package
 Title: Tools for Selecting Low-Relatedness Breeding Groups and
         Screening VCF Data
-Version: 0.4.2
+Version: 0.4.3
 Authors@R: person("Jonathan Sandoval-Castillo Yuma248", email = "jonathan.sandoval-castillo@flinders.edu.au", role = c("aut", "cre"))
 Description: Provides three sets of tools. (1) Given a pairwise kinship/relatedness
     data frame and per-individual sex and internal relatedness values, selects
